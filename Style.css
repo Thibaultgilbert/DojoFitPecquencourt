@@ -1,0 +1,323 @@
+/*********************** BASE ************************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #000;
+  color: #e5e5e5;
+}
+
+/*********************** HERO ************************/
+
+.hero {
+  min-height: 100vh;
+  height: auto;
+  background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+    url("/images/Championnat-Lallaing.jpg") center/cover no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+
+  padding: 120px 2rem 80px;
+}
+
+.hero-contact {
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  transform: translateY(20px);
+}
+
+.logo {
+  width: 350px;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 4rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+/*********************** SECTIONS ************************/
+
+section {
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+}
+
+/*********************** TITRES ************************/
+
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 50px;
+  line-height: 1.2;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #b02012;
+  margin: 10px auto 0;
+}
+
+/*********************** TEXTE ************************/
+
+p {
+  font-size: 1.1rem;
+  color: #9a9a9a;
+  margin-bottom: 2rem;
+}
+
+/*********************** BOUTON ************************/
+
+.cta {
+  text-decoration: none;
+  padding: 14px 32px;
+  background-color: #b02012;
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.cta:hover {
+  background-color: #d6281c;
+}
+
+/*********************** CONTACT ************************/
+
+.contact {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-box {
+  background: rgba(15,15,15,0.9);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 60px 40px;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.contact-item i {
+  font-size: 34px;
+  margin-bottom: 12px;
+  color: #d6281c;
+}
+
+.contact-item span {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.contact-item:hover {
+  transform: translateY(-6px) scale(1.05);
+}
+
+/*********************** DISCIPLINES ************************/
+
+.disciplines::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+    url("/images/Championnat-Lallaing.jpg") center/cover no-repeat;
+  z-index: -1;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 30px;
+  border-radius: 12px;
+
+  background: rgba(20,20,20,0.8);
+  backdrop-filter: blur(4px);
+
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: 0.3s;
+}
+
+.card i {
+  font-size: 40px;
+  color: #c1121f;
+  margin-bottom: 15px;
+}
+
+.card:hover i {
+  transform: scale(1.2);
+}
+
+.card h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 0.95rem;
+}
+
+.card .cta {
+  margin-top: auto;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  background-color: #222;
+}
+
+/*********************** PLANNING ************************/
+
+.planning::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+    url("/images/Dojo-Ext.jpg") center/cover no-repeat;
+  z-index: -1;
+}
+
+.planning-table {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  border-collapse: collapse;
+  background: rgba(10,10,10,0.9);
+}
+
+.planning-table th {
+  background: #b02012;
+  padding: 15px;
+}
+
+.planning-table td {
+  padding: 15px;
+  border: 1px solid #222;
+}
+
+.planning-table tr:nth-child(even) {
+  background: #151515;
+}
+
+.planning-table tr:hover {
+  background: #1f1f1f;
+}
+
+.warning {
+  color: #ff4c4c;
+  margin-top: 20px;
+}
+
+/*********************** RESPONSIVE ************************/
+
+/* TABLETTE */
+@media (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .logo {
+    width: 250px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  section {
+    padding: 60px 15px;
+  }
+
+  h1 {
+    font-size: 2.3rem;
+  }
+
+  .logo {
+    width: 160px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .contact-box {
+    padding: 30px 20px;
+  }
+
+  .contact-icons {
+    gap: 25px;
+  }
+
+  .planning-table {
+    font-size: 0.75rem;
+  }
+
+  .planning-table th,
+  .planning-table td {
+    padding: 6px;
+  }
+
+  .warning {
+    font-size: 0.8rem;
+  }
+}
