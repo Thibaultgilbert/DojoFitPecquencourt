@@ -19,7 +19,7 @@ body {
   height: auto;
   background:
     linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-    url("/images/Championnat-Lallaing.jpg") center/cover no-repeat;
+    url("images/Championnat-Lallaing.jpg") center/cover no-repeat;
 
   display: flex;
   flex-direction: column;
